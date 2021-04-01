@@ -41,7 +41,7 @@ def get_exif_metadata(image_path):
     return ret
     
 def printMeta():
-    ruta = input("Ruta de imágenes: ") #C:\\Users\\marle\\Downloads\\Scraping Marzo24
+    ruta = input("Ruta de imágenes: ")
     os.chdir(ruta)
     for root, dirs, files in os.walk(".", topdown=False):
         for name in files:
