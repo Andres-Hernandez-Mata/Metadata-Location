@@ -41,22 +41,27 @@ def get_exif_metadata(image_path):
     return ret
     
 def printMeta():
+    file = open("data\extractData.txt", "w")
     ruta = input("Ruta de imágenes: ")
     os.chdir(ruta)
     for root, dirs, files in os.walk(".", topdown=False):
         for name in files:
-            print(os.path.join(root, name))
-            print ("[+] Metadata for file: %s " %(name))
+            file.write(os.path.join(root, name))
+            file.write(os.linesep)
+            file.write("[+] Metadata for file: %s " %(name))
+            file.write(os.linesep)
             #input()
             try:
                 exifData = {}
                 exif = get_exif_metadata(name)
                 for metadata in exif:
-                    print ("Metadata: %s - Value: %s " %(metadata, exif[metadata]))
-                print ("\n")
+                    file.write("Metadata: %s - Value: %s " %(metadata, exif[metadata]))
+                    file.write(os.linesep)                
             except:
                 import sys, traceback
                 traceback.print_exc(file=sys.stdout)
+    file.close()
+
 printMeta()
 
 
