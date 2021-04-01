@@ -18,7 +18,7 @@ def decode_gps_info(exif):
             Nmult = 1
         else:
             Nmult = -1
-        if exif['GPSInfo'][1] == 'E':
+        if exif['GPSInfo'][3] == 'E':
             Wmult = 1
         else:
             Wmult = -1
