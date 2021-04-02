@@ -61,6 +61,7 @@ def printMeta():
                 import sys, traceback
                 traceback.print_exc(file=sys.stdout)
     file.close()
+    print("Puedes consultar el resultado obtenido en data\extractData.txt")
 
 printMeta()
 
