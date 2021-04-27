@@ -1,4 +1,10 @@
-# -*- encoding: utf-8 -*-
+"""
+Uso: Metadata de imagenes
+Creador: Andrés Hernández Mata
+Version: 1.0.0
+Python: 3.9.1
+Fecha: 26 Abril 2020
+"""
 
 from PIL.ExifTags import TAGS, GPSTAGS
 from PIL import Image
